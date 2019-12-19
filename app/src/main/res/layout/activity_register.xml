@@ -28,14 +28,14 @@
             android:layout_marginTop="50dp"/>
 
         <EditText
-            android:id="@+id/edit_id"
+            android:id="@+id/edit_register_id"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="User ID"
             android:layout_marginTop="50dp"/>
 
         <EditText
-            android:id="@+id/edit_password"
+            android:id="@+id/edit_register_password"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="Password"

@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.security.MessageDigest;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class DBHelper extends SQLiteOpenHelper {
@@ -46,7 +45,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         //User
         ContentValues values = new ContentValues();
-        User user = new User(1,"kensiah","kensiah123");
+        User user = new User("kensiah","kensiah123");
 
         values.put(User.COLUMN_ID,user.getId());
         values.put(User.COLUMN_USERNAME,user.getUsername());
