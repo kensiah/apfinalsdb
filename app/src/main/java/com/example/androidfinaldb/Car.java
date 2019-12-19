@@ -1,5 +1,7 @@
 package com.example.androidfinaldb;
 
+import android.graphics.drawable.Drawable;
+
 public class Car {
     public static final String TABLE_NAME = "cars";
     public static final String COLUMN_ID = "id";
@@ -7,19 +9,36 @@ public class Car {
     public static final String COLUMN_VARIANT = "variant";
     public static final String COLUMN_PRICE = "price";
 
-    private int id;
+    private int id,img;
     private double price;
     private String model,variant;
+    private Drawable picture;
+
+    public int getImg() {
+        return img;
+    }
+
+    public void setImg(int img) {
+        this.img = img;
+    }
 
     public Car(){
 
     }
 
-    public Car(int id,String model,String variant,double price){
-        this.id = id;
-        this.price = price;
+    public Car(String model,int img){
         this.model = model;
-        this.variant = variant;
+        this.img = img;
+    }
+
+
+
+    public Drawable getPicture() {
+        return picture;
+    }
+
+    public void setPicture(Drawable picture) {
+        this.picture = picture;
     }
 
     public int getId() {

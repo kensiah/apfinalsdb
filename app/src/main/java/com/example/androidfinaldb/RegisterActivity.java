@@ -48,6 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
                             Toast.makeText(RegisterActivity.this,"Registration Success!",Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
                             startActivity(intent);
+                            finish();
                         }else{
                             Toast.makeText(RegisterActivity.this,"Password and Confirm Password do not match.",Toast.LENGTH_SHORT).show();
                         }

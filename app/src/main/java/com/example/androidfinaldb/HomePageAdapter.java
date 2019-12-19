@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,11 +13,11 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-public class CarAdapter extends ArrayAdapter<Car> {
+public class HomePageAdapter extends ArrayAdapter<Car> {
     private Context mContext;
     private ArrayList<Car> mData;
 
-    public CarAdapter(Context context,ArrayList<Car> data){
+    public HomePageAdapter(Context context, ArrayList<Car> data){
         super(context,R.layout.list_car_item);
         mContext = context;
         mData = data;
@@ -43,23 +44,24 @@ public class CarAdapter extends ArrayAdapter<Car> {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.list_car_item,null);
 
             holder.tvModel = convertView.findViewById(R.id.tv_model);
-            holder.tvVariant = convertView.findViewById(R.id.tv_variant);
-            holder.tvPrice = convertView.findViewById(R.id.tv_price);
+            holder.img = convertView.findViewById(R.id.img_model);
 
             convertView.setTag(holder);
         } else{
             holder = (ViewHolder) convertView.getTag();
         }
+        Car model = (Car) getItem(position);
 
-        holder.tvModel.setText(data.getModel());
-        holder.tvVariant.setText(data.getVariant());
-        holder.tvPrice.setText(Double.toString(data.getPrice()));
+        String carModel = data.getModel();
+        holder.tvModel.setText(carModel);
+        holder.img.setImageResource(model.getImg());
 
         return convertView;
     }
 
     private class ViewHolder{
-        TextView tvModel,tvVariant,tvPrice;
+        TextView tvModel;
+        ImageView img;
     }
 
     public void updateData(ArrayList<Car> newData){
