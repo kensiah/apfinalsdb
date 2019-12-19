@@ -9,7 +9,6 @@
 
     <ImageView
         android:id="@+id/img_radio"
-        android:src="@drawable/preve"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
