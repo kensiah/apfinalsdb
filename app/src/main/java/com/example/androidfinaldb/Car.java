@@ -5,11 +5,22 @@ public class Car {
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_MODEL = "model";
     public static final String COLUMN_VARIANT = "variant";
-    public static final String COLUMN_PRICE_PM = "pricePm";
+    public static final String COLUMN_PRICE = "price";
 
     private int id;
     private double price;
     private String model,variant;
+
+    public Car(){
+
+    }
+
+    public Car(int id,String model,String variant,double price){
+        this.id = id;
+        this.price = price;
+        this.model = model;
+        this.variant = variant;
+    }
 
     public int getId() {
         return id;
