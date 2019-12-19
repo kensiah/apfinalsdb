@@ -23,6 +23,8 @@ public class RadioActivity extends AppCompatActivity {
     private void initialize(){
         Bundle bundle = getIntent().getExtras();
         String model = bundle.getString("model");
+        String[] variant = {};
+
         if(model.equals("X70")){
             textView.setText(model);
             img.setImageResource(R.drawable.x70);
@@ -60,4 +62,9 @@ public class RadioActivity extends AppCompatActivity {
     private void setListeners(){
 
     }
+
+    private void radio(RadioButton r){
+
+    }
+
 }
