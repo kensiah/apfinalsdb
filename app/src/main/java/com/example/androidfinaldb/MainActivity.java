@@ -45,10 +45,8 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Car car = (Car)parent.getAdapter().getItem(position);
 
-                Intent i = new Intent(MainActivity.this,CarDetailActivity.class);
+                Intent i = new Intent(MainActivity.this,RadioActivity.class);
                 i.putExtra("model",car.getModel());
-                i.putExtra("variant",car.getVariant());
-                i.putExtra("price",car.getPrice());
                 startActivity(i);
             }
         });
