@@ -7,8 +7,15 @@
     tools:context=".RadioActivity"
     android:orientation="vertical">
 
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"/>
+
     <ImageView
         android:id="@+id/img_radio"
+        android:src="@drawable/preve"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

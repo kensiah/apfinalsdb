@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(MainActivity.this,RadioActivity.class);
                 i.putExtra("model",car.getModel());
                 startActivity(i);
+                finish();
             }
         });
     }
