@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Android final (DB)</string>
+
+    <string name="year_prompt">Choose a year</string>
+
+    <string-array name="year_arrays">
+        <item>1 year</item>
+        <item>2 years</item>
+        <item>3 years</item>
+        <item>4 years</item>
+        <item>5 years</item>
+        <item>6 years</item>
+        <item>7 years</item>
+        <item>8 years</item>
+        <item>9 years</item>
+    </string-array>
+
 </resources>

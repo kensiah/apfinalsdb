@@ -13,8 +13,8 @@ import android.widget.TextView;
 public class RadioActivity extends AppCompatActivity {
     private ImageView img;
     private RadioButton radio1,radio2,radio3,radio4,radio5;
-    private TextView textView;
-    private Button btnBack;
+    private TextView textView,textTotalPrice,textLoanPrice;
+    private Button btnBack,btnCalculate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +27,6 @@ public class RadioActivity extends AppCompatActivity {
     private void initialize(){
         Bundle bundle = getIntent().getExtras();
         String model = bundle.getString("model");
-        String[] variant = {};
 
         if(model.equals("X70")){
             textView.setText(model);
@@ -37,6 +36,9 @@ public class RadioActivity extends AppCompatActivity {
             radio(radio3,"Executive AWD");
             radio(radio4,"Premium 2WD");
             radioHide(radio5);
+            if(radio1.isSelected()){
+                setPrice(textTotalPrice,99800.00);
+            }
         }else if(model.equals("SAGA")){
             textView.setText(model);
             img.setImageResource(R.drawable.saga);
@@ -91,12 +93,15 @@ public class RadioActivity extends AppCompatActivity {
     private void findViews(){
         img = findViewById(R.id.img_radio);
         textView = findViewById(R.id.tv_model_radio);
+        textTotalPrice = findViewById(R.id.tv_total_price);
+        textLoanPrice = findViewById(R.id.tv_loan_price);
         radio1 = findViewById(R.id.variant1);
         radio2 = findViewById(R.id.variant2);
         radio3 = findViewById(R.id.variant3);
         radio4 = findViewById(R.id.variant4);
         radio5 = findViewById(R.id.variant5);
         btnBack = findViewById(R.id.btn_back);
+        btnCalculate = findViewById(R.id.btn_calculate);
     }
 
     private void setListeners(){
@@ -116,6 +121,10 @@ public class RadioActivity extends AppCompatActivity {
 
     private void radioHide(RadioButton r){
         r.setVisibility(View.GONE);
+    }
+
+    private void setPrice(TextView tv, double price){
+        tv.setText(Double.toString(price));
     }
 
 }
