@@ -32,18 +32,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(TABLE_USER);
         db.execSQL(TABLE_ORDER);
-        //Car
-        ContentValues values1 = new ContentValues();
-        /*
-        Car car = new Car("X70","Standard 2WD",99800.00);
 
-        values1.put(Car.COLUMN_ID,car.getId());
-        values1.put(Car.COLUMN_MODEL,car.getModel());
-        values1.put(Car.COLUMN_VARIANT,car.getVariant());
-        values1.put(Car.COLUMN_PRICE,car.getPrice());
-        db.insert(Car.TABLE_NAME,null,values1);
-        //Car
-*/
         //User
         ContentValues values = new ContentValues();
         User user = new User("kensiah","kensiah123");
